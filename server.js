@@ -30,10 +30,12 @@ app.use('/bios', biosRouter);
 //     {id:3, name: "Flash", skill: "kindness", ability:"speed"},
 // ];
 
+
+// ==== Now that routes are working updating Home Routes with Pug view
 // === Get 
 app.get("/", (req, res) => {
     // res.send("<h1>The API has Begun!!</h1>") ===here for testing
-    res.json(heroes);
+    res.render('index', {title: "Welcome to the World of Heroes"});
 })
 
 // === Get by id
